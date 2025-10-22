@@ -323,17 +323,17 @@ export default function Home() {
               <h3 className="font-bold text-white mb-4">Support</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="/products" className="hover:text-white">
                     FAQ
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="/products" className="hover:text-white">
                     Shipping Info
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="/products" className="hover:text-white">
                     Returns
                   </a>
                 </li>

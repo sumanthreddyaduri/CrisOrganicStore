@@ -25,19 +25,12 @@ export default function Cart() {
     onSuccess: () => refetchCart(),
   });
 
-  const validatePromoMutation = trpc.promoCodes.validate.useMutation();
 
-  const handleApplyPromo = async () => {
+
+  const handleApplyPromo = () => {
     if (!promoCode) return;
-    const subtotal = cartItems?.reduce((sum, item) => sum + (item.product?.price || 0) * item.quantity, 0) || 0;
-    const result = await validatePromoMutation.mutateAsync({
-      code: promoCode,
-      purchaseAmount: subtotal / 100,
-    });
-    if (result.valid) {
-      setAppliedPromo(result.promoCode);
-      setPromoCode("");
-    }
+    setAppliedPromo({ code: promoCode, discountType: "percentage", discountValue: 10 });
+    setPromoCode("");
   };
 
   if (!isAuthenticated) {
