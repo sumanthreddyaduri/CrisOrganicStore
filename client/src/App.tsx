@@ -12,6 +12,8 @@ import Checkout from "./pages/Checkout";
 import Orders from "./pages/Orders";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import MerchantDashboard from "./pages/MerchantDashboard";
+import Auth from "./pages/Auth";
 
 function Router() {
   return (
@@ -24,6 +26,10 @@ function Router() {
       <Route path={"/orders"} component={Orders} />
       <Route path={"/blog"} component={Blog} />
       <Route path={"/contact"} component={Contact} />
+      <Route path={"/merchant"} component={MerchantDashboard} />
+      <Route path="/auth" component={Auth} />
+      <Route path="/login" component={Auth} />
+      <Route path="/register" component={Auth} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
